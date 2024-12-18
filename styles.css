@@ -1,0 +1,146 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #ff6ec7, #ff49db, #8000ff, #ff6347, #ff9800); /* Dynamic Colorful Gradient */
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Gradient Animation */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header Logo and Website Name */
+header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 90px; /* Logo size */
+    height: 90px;
+    border-radius: 50%; /* Circular logo */
+    margin-right: 20px; /* Spacing between logo and text */
+    object-fit: cover; /* Ensures logo fits properly inside the circle */
+}
+
+.website-name {
+    font-size: 2rem; /* Slightly smaller font size for name */
+    color: white; /* White color for website name */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Optional text shadow for better visibility */
+}
+
+/* Form Container */
+.form-container {
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Login/Registration/Forgot Password Box */
+.login-box, .register-box, .forgot-password-box {
+    padding: 20px;
+}
+
+/* Form Inputs */
+input[type="email"], input[type="password"], input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #ff6347; /* Red border */
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Focus Effect */
+input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #ff49db; /* Purple focus */
+    box-shadow: 0 0 8px rgba(255, 73, 219, 0.5); /* Purple shadow */
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background-color: #ff6347; /* Red button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 15px;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff4500; /* Darker red on hover */
+    transform: translateY(-3px);
+}
+
+/* Links */
+a {
+    color: #ff6347;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .form-container {
+        width: 90%;
+    }
+    .login-box, .register-box, .forgot-password-box {
+        padding: 15px;
+    }
+}
